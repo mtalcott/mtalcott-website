@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {TypedText} from '../components/TypedText.jsx';
+import { TypedText } from '../components/TypedText.jsx';
 import profilePic from '../assets/profile-pic.jpg';
+import { Icon } from 'astro-icon';
 ---
 
 <Layout title="Mack Talcott">
@@ -18,9 +19,13 @@ import profilePic from '../assets/profile-pic.jpg';
 		<p class="text-xl mt-6 font-thin text-center">
 			I'm a software engineering leader located in Seattle, WA. I like building products and teams. I currently work at <a class="text-blue-600" href="https://www.remitly.com">Remitly</a>.
 		</p>
-		<p class="mt-10 text-gray-700 flex items-center justify-center">
-			<a href="#">LinkedIn</a>
-			<a href="#">Github</a>
+		<p class="mt-6 text-gray-700 flex items-center justify-center">
+			<a href="https://www.linkedin.com/in/macktalcott/" rel="noopener noreferrer" target="_blank">
+				<Icon class="mx-2 h-10 w-10" name="mdi:linkedin" />
+			</a>
+			<a href="https://github.com/mtalcott" rel="noopener noreferrer" target="_blank">
+				<Icon class="mx-2 h-10 w-10" name="mdi:github" />
+			</a>
 		</p>
 		{/*<h1>Welcome to <span class="text-gradient">Mack's personal website</span></h1>
 		<p class="instructions">
