@@ -1,11 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import {TypedText} from '../components/TypedText.jsx';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+<Layout title="Mack Talcott">
+	<main class="flex-auto w-full container max-w-3xl mx-auto px-6 pt-10">
+		<img class="flex rounded-full h-36 w-36 bg-contain mx-auto"></img>
+		<h1 class="flex items-center leading-none console mt-6 justify-center ">
+			<span class="prompt text-gradient text-4xl text-gray-700">
+				<span>$ </span>
+				<TypedText client:load
+					text="Mack Talcott"
+				/>
+			</span>
+		</h1>
+		<p class="text-xl mt-6 font-thin text-center">
+			I'm a software engineering leader located in Seattle, WA. I currently work at <a href="#">Remitly</a> building stuff.
+		</p>
+		<p class="mt-10 text-gray-700 flex items-center justify-center">
+			<a href="#">LinkedIn</a>
+			<a href="#">Github</a>
+		</p>
+		{/*<h1>Welcome to <span class="text-gradient">Mack's personal website</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -31,12 +47,12 @@ import Card from '../components/Card.astro';
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
-		</ul>
+		</ul>*/} 
 	</main>
 </Layout>
 
 <style>
-	main {
+	{/*main {
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 60ch;
@@ -45,7 +61,7 @@ import Card from '../components/Card.astro';
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
-	}
+	}*/}
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
@@ -53,7 +69,7 @@ import Card from '../components/Card.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions {
+	{/*.instructions {
 		line-height: 1.6;
 		margin: 1rem 0;
 		border: 1px solid rgba(var(--accent), 25%);
@@ -77,5 +93,9 @@ import Card from '../components/Card.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}*/}
+	.prompt {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 </style>
