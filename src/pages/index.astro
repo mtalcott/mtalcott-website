@@ -2,8 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import { TypedTextPrompt } from '../components/TypedTextPrompt.jsx';
 import profilePic from '../assets/profile-pic.jpg';
-import { Image, Picture } from '@astrojs/image/components';
-import { Icon } from 'astro-icon';
+import { Image } from '@astrojs/image/components';
+import LinkIcon from '../components/LinkIcon.astro';
+
+const linkClass = "block hover:text-accent2 transition-all ease-out duration-300";
+const iconClass = "h-8 w-8";
 ---
 
 <Layout title="Mack Talcott | Software Engineering Leader"
@@ -27,14 +30,16 @@ import { Icon } from 'astro-icon';
 			*/}</a>.
 		</p>
 		<p class="mt-6 text-accent flex items-center space-x-2 justify-center">
-			<a href="https://www.linkedin.com/in/macktalcott/" rel="noopener noreferrer" target="_blank"
-					class="block hover:text-accent2 transition-all ease-out duration-300" title="Mack's LinkedIn profile">
-				<Icon class="h-8 w-8" name="mdi:linkedin" />
-			</a>
-			<a href="https://github.com/mtalcott" rel="noopener noreferrer" target="_blank"
-					class="block hover:text-accent2 transition-all ease-out duration-300" title="Mack's Github profile">
-				<Icon class="h-8 w-8 hover:" name="mdi:github" />
-			</a>
+			<LinkIcon href="https://www.linkedin.com/in/macktalcott/"
+					icon="mdi:linkedin"
+					title="Mack's LinkedIn profile"
+					linkClass={linkClass}
+					iconClass={iconClass} />
+			<LinkIcon href="https://github.com/mtalcott"
+					icon="mdi:github"
+					title="Mack's Github profile"
+					linkClass={linkClass}
+					iconClass={iconClass} />
 		</p>
 	</main>
 </Layout>
