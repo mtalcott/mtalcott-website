@@ -1,16 +1,21 @@
 ---
 export interface Props {
-    icon: string;
-    href: string;
-	linkClass?: string;
-    iconClass?: string;
-    title?: string;
+  icon: string;
+  href: string;
+  linkClass?: string;
+  iconClass?: string;
+  title?: string;
 }
 
-import { Icon } from 'astro-icon';
+import { Icon } from "astro-icon";
 ---
 
-<a href={Astro.props.href} rel="noopener noreferrer" target="_blank"
-        class={Astro.props.linkClass} title={Astro.props.title}>
-    <Icon class={Astro.props.iconClass} name={Astro.props.icon} />
+<a
+  href={Astro.props.href}
+  rel="noopener noreferrer"
+  target="_blank"
+  class={Astro.props.linkClass}
+  title={Astro.props.title}
+>
+  <Icon class={Astro.props.iconClass} name={Astro.props.icon} />
 </a>

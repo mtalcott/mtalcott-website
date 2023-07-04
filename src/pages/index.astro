@@ -1,58 +1,77 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { TypedTextPrompt } from '../components/TypedTextPrompt.jsx';
-import profilePic from '../assets/profile-pic.jpg';
-import { Image } from '@astrojs/image/components';
-import LinkIcon from '../components/LinkIcon.astro';
+import Layout from "../layouts/Layout.astro";
+import { TypedTextPrompt } from "../components/TypedTextPrompt.jsx";
+import profilePic from "../assets/profile-pic.jpg";
+import { Image } from "@astrojs/image/components";
+import LinkIcon from "../components/LinkIcon.astro";
 
-const linkClass = "block hover:text-accent2 transition-all ease-out duration-300";
+const linkClass =
+    "block hover:text-accent2 transition-all ease-out duration-300";
 const iconClass = "h-8 w-8";
 ---
 
-<Layout title="Mack Talcott | Software Engineering Leader"
-		description="Personal website of Mack Talcott, a software engineering leader located in Seattle, WA">
-	<main class="flex-auto w-full container max-w-3xl mx-auto px-6 pt-10">
-		<Image class="flex rounded-full h-40 w-40 bg-contain mx-auto" src={profilePic} alt="Mack's profile picture" format="webp" height={240} width={240} />
-		<h1 class="flex items-center leading-none console mt-6 justify-center">
-			<span class="font-mono text-4xl">
-				<TypedTextPrompt client:load
-					text="Mack Talcott"
-				/>
-			</span>
-		</h1>
-		<p class="text-xl mt-6 font-thin text-center">
-			I'm a software engineering leader located in Seattle, WA. I like building products and teams. I currently
-			work at
-			<a class="group text-sky-600 transition-all ease-out duration-300" href="https://www.remitly.com" rel="noopener noreferrer" target="_blank">
-				<span class="bg-left-bottom bg-gradient-to-r from-sky-600 to-sky-600 bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out">
-					Remitly{/*
-				 */}</span>{/*
-			*/}</a>.
-		</p>
-		<p class="mt-6 text-accent flex items-center space-x-2 justify-center">
-			<LinkIcon href="https://www.linkedin.com/in/macktalcott/"
-					icon="mdi:linkedin"
-					title="Mack's LinkedIn profile"
-					linkClass={linkClass}
-					iconClass={iconClass} />
-			<LinkIcon href="https://github.com/mtalcott"
-					icon="mdi:github"
-					title="Mack's Github profile"
-					linkClass={linkClass}
-					iconClass={iconClass} />
-		</p>
-	</main>
+<Layout
+    title="Mack Talcott | Software Engineering Leader"
+    description="Personal website of Mack Talcott, a software engineering leader located in Seattle, WA"
+>
+    <main class="flex-auto w-full container max-w-3xl mx-auto px-6 pt-10">
+        <Image
+            class="flex rounded-full h-40 w-40 bg-contain mx-auto"
+            src={profilePic}
+            alt="Mack's profile picture"
+            format="webp"
+            height={240}
+            width={240}
+        />
+        <h1 class="flex items-center leading-none console mt-6 justify-center">
+            <span class="font-mono text-4xl">
+                <TypedTextPrompt client:load text="Mack Talcott" />
+            </span>
+        </h1>
+        <p class="text-xl mt-6 font-thin text-center">
+            I'm a software engineering leader located in Seattle, WA. I like
+            building products and teams. I currently work at
+            <a
+                class="group text-sky-600 transition-all ease-out duration-300"
+                href="https://www.remitly.com"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <span
+                    class="bg-left-bottom bg-gradient-to-r from-sky-600 to-sky-600 bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
+                >{ /*
+					*/ }Remitly{ /*
+                */ }</span>{ /*
+			*/ }</a>.
+        </p>
+        <p class="mt-6 text-accent flex items-center space-x-2 justify-center">
+            <LinkIcon
+                href="https://www.linkedin.com/in/macktalcott/"
+                icon="mdi:linkedin"
+                title="Mack's LinkedIn profile"
+                linkClass={linkClass}
+                iconClass={iconClass}
+            />
+            <LinkIcon
+                href="https://github.com/mtalcott"
+                icon="mdi:github"
+                title="Mack's Github profile"
+                linkClass={linkClass}
+                iconClass={iconClass}
+            />
+        </p>
+    </main>
 </Layout>
 
 <style is:global>
-	.accent-text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.typed-cursor {
-		-webkit-text-fill-color: var(--accent2);
-	}
+    .accent-text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+    .typed-cursor {
+        -webkit-text-fill-color: var(--accent2);
+    }
 </style>
