@@ -17,11 +17,9 @@ export function TypedText({text}) {
 		};
 	  }, []);
 	
-	  return <span className="typed-text" ref={el} />;
+	  return (
+	  	<span className="inline-block min-w-[20px]">
+		  <span className="typed-text" ref={el} />
+	    </span>
+	  );
 }
-
-<style>
-	.typed-text {
-		
-	}
-</style>
