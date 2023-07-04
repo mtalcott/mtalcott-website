@@ -1,7 +1,7 @@
 import React from "react";
 import Typed from 'typed.js';
 
-export function TypedText({text}) {
+export function TypedTextPrompt({text}) {
 	// Create reference to store the DOM element containing the animation
 	const el = React.useRef(null);
 	React.useEffect(() => {
@@ -18,8 +18,11 @@ export function TypedText({text}) {
 	  }, []);
 	
 	  return (
-	  	<span className="inline-block min-w-[20px]">
-		  <span className="typed-text" ref={el} />
-	    </span>
+		<span className="accent-text-gradient">
+			<span className="promptCharacter">$ </span>
+			<span className="inline-block min-w-[20px]">
+				<span className="typed-text" ref={el} />
+			</span>
+		</span>
 	  );
 }

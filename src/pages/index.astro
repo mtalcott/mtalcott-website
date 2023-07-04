@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { TypedText } from '../components/TypedText.jsx';
+import { TypedTextPrompt } from '../components/TypedTextPrompt.jsx';
 import profilePic from '../assets/profile-pic.jpg';
 import { Image, Picture } from '@astrojs/image/components';
 import { Icon } from 'astro-icon';
@@ -10,9 +10,8 @@ import { Icon } from 'astro-icon';
 	<main class="flex-auto w-full container max-w-3xl mx-auto px-6 pt-10">
 		<Image class="flex rounded-full h-40 w-40 bg-contain mx-auto" src={profilePic} alt="Mack's profile picture" format="webp" height={240} width={240} />
 		<h1 class="flex items-center leading-none console mt-6 justify-center ">
-			<span class="font-mono x-text-gradient text-4xl text-gray-700">
-				<span>$ </span>
-				<TypedText client:load
+			<span class="font-mono text-4xl">
+				<TypedTextPrompt client:load
 					text="Mack Talcott"
 				/>
 			</span>
@@ -66,47 +65,15 @@ import { Icon } from 'astro-icon';
 	</main>
 </Layout>
 
-<style>
-	{/*main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}*/}
-	.text-gradient {
+<style is:global>
+	.accent-text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
 	}
-	{/*.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+	.typed-cursor {
+		-webkit-text-fill-color: var(--accent-end);
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}*/}
 </style>
