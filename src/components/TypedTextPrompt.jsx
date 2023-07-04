@@ -20,7 +20,7 @@ export function TypedTextPrompt({text}) {
 	  return (
 		<span className="accent-text-gradient">
 			<span className="promptCharacter">$ </span>
-			<span className="inline-block min-w-[20px]">
+			<span className="inline-block min-w-[21px]">
 				<span className="typed-text" ref={el} />
 			</span>
 		</span>
