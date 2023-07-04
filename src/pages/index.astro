@@ -2,12 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import { TypedText } from '../components/TypedText.jsx';
 import profilePic from '../assets/profile-pic.jpg';
+import { Image, Picture } from '@astrojs/image/components';
 import { Icon } from 'astro-icon';
 ---
 
 <Layout title="Mack Talcott">
 	<main class="flex-auto w-full container max-w-3xl mx-auto px-6 pt-10">
-		<img class="flex rounded-full h-40 w-40 bg-contain mx-auto" src={profilePic}></img>
+		<Image class="flex rounded-full h-40 w-40 bg-contain mx-auto" src={profilePic} alt="Mack's profile picture" format="webp" height={160} width={160} />
 		<h1 class="flex items-center leading-none console mt-6 justify-center ">
 			<span class="font-mono x-text-gradient text-4xl text-gray-700">
 				<span>$ </span>
