@@ -5,7 +5,7 @@ Mack Talcott's personal website, built with:
 - [Astro](https://astro.build/)
 - [React](https://react.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [typed.js](https://github.com/mattboldt/typed.js)
+- [Typed.js](https://github.com/mattboldt/typed.js)
 - [AWS Amplify](https://aws.amazon.com/amplify/)
 
 ## 🚀 Project Structure
