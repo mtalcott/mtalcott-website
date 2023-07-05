@@ -4,6 +4,7 @@ import { TypedTextPrompt } from "../components/TypedTextPrompt.jsx";
 import profilePic from "../assets/profile-pic.jpg";
 import { Image } from "@astrojs/image/components";
 import LinkIcon from "../components/LinkIcon.astro";
+import TextLink from "../components/TextLink.astro";
 
 const linkClass =
     "block hover:text-accent2 transition-all ease-out duration-300";
@@ -31,18 +32,7 @@ const iconClass = "h-8 w-8";
         <p class="text-xl mt-6 font-thin text-center">
             I'm a software engineering leader located in Seattle, WA. I like
             building products and teams. I currently work at
-            <a
-                class="group text-sky-600 transition-all ease-out duration-300"
-                href="https://www.remitly.com"
-                rel="noopener noreferrer"
-                target="_blank"
-            >
-                <span
-                    class="bg-left-bottom bg-gradient-to-r from-sky-600 to-sky-600 bg-[length:0%_1px] bg-no-repeat group-hover:bg-[length:100%_1px] transition-all duration-300 ease-out"
-                >{ /*
-					*/ }Remitly{ /*
-                */ }</span>{ /*
-			*/ }</a>.
+			<TextLink href="https://www.remitly.com">Remitly</TextLink>.
         </p>
         <p class="mt-6 text-accent flex items-center space-x-2 justify-center">
             <LinkIcon
