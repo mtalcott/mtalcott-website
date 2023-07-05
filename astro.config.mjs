@@ -5,7 +5,7 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.macktalcott.com",
+  site: "https://mack.tal.co.tt",
   integrations: [
     tailwind(),
     react(),
