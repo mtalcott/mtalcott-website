@@ -5,6 +5,7 @@ import profilePic from "../assets/profile-pic.jpg";
 import { Image } from "@astrojs/image/components";
 import LinkIcon from "../components/LinkIcon.astro";
 import TextLink from "../components/TextLink.astro";
+import Tilt from "../components/Tilt.astro";
 
 const linkClass =
     "block hover:text-accent2 transition-all ease-out duration-300";
@@ -16,40 +17,42 @@ const iconClass = "h-8 w-8";
     description="Personal website of Mack Talcott, a software engineering leader located in Seattle, WA"
 >
     <main class="flex-auto w-full container max-w-3xl mx-auto px-6 pt-10">
-        <Image
-            class="flex rounded-full h-40 w-40 bg-contain mx-auto"
-            src={profilePic}
-            alt="Mack's profile picture"
-            format="webp"
-            height={240}
-            width={240}
-        />
-        <h1 class="flex items-center leading-none console mt-6 justify-center">
-            <span class="font-mono text-4xl">
-                <TypedTextPrompt client:load text="Mack Talcott" />
-            </span>
-        </h1>
-        <p class="text-xl mt-6 font-thin text-center">
-            I'm a software engineering leader located in Seattle, WA. I like
-            building products and teams. I currently work at
-			<TextLink href="https://www.remitly.com">Remitly</TextLink>.
-        </p>
-        <p class="mt-6 text-accent flex items-center space-x-2 justify-center">
-            <LinkIcon
-                href="https://www.linkedin.com/in/macktalcott/"
-                icon="mdi:linkedin"
-                title="Mack's LinkedIn profile"
-                linkClass={linkClass}
-                iconClass={iconClass}
+        <Tilt>
+            <Image
+                class="flex rounded-full h-40 w-40 bg-contain mx-auto"
+                src={profilePic}
+                alt="Mack's profile picture"
+                format="webp"
+                height={240}
+                width={240}
             />
-            <LinkIcon
-                href="https://github.com/mtalcott"
-                icon="mdi:github"
-                title="Mack's Github profile"
-                linkClass={linkClass}
-                iconClass={iconClass}
-            />
-        </p>
+            <h1 class="flex items-center leading-none console mt-6 justify-center">
+                <span class="font-mono text-4xl">
+                    <TypedTextPrompt client:load text="Mack Talcott" />
+                </span>
+            </h1>
+            <p class="text-xl mt-6 font-thin text-center">
+                I'm a software engineering leader located in Seattle, WA. I like
+                building products and teams. I currently work at
+                <TextLink href="https://www.remitly.com">Remitly</TextLink>.
+            </p>
+            <p class="mt-6 text-accent flex items-center space-x-2 justify-center">
+                <LinkIcon
+                    href="https://www.linkedin.com/in/macktalcott/"
+                    icon="mdi:linkedin"
+                    title="Mack's LinkedIn profile"
+                    linkClass={linkClass}
+                    iconClass={iconClass}
+                />
+                <LinkIcon
+                    href="https://github.com/mtalcott"
+                    icon="mdi:github"
+                    title="Mack's Github profile"
+                    linkClass={linkClass}
+                    iconClass={iconClass}
+                />
+            </p>
+        </Tilt>
     </main>
 </Layout>
 

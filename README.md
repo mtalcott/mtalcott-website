@@ -6,6 +6,7 @@ Mack Talcott's personal website, built with:
 - [React](https://react.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Typed.js](https://github.com/mattboldt/typed.js)
+- [GSAP](https://github.com/greensock/GSAP)
 - [AWS Amplify](https://aws.amazon.com/amplify/)
 
 ## 🚀 Project Structure
