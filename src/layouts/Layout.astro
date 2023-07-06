@@ -1,7 +1,7 @@
 ---
 export interface Props {
   title: string;
-  description: string;
+  description?: string;
 }
 
 const { title, description } = Astro.props;
@@ -66,5 +66,13 @@ const ogImage = new URL("/og-image.png", Astro.site);
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
       DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  .accent-text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-box-decoration-break: clone;
+      background-size: 400%;
+      background-position: 0%;
   }
 </style>
