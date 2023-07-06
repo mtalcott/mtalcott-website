@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tilt from "../components/Tilt.astro";
+---
+
+<Layout title="404 Not Found">
+    <main class="flex-auto w-full container max-w-3xl mx-auto px-6 pt-10">
+        <Tilt>
+            <h1
+                class="flex items-center leading-none mt-6 justify-center accent-text-gradient"
+            >
+                <span class="font-mono text-4xl">Whoops!</span>
+            </h1>
+            <p class="text-xl mt-6 font-thin text-center">
+                I can't find that page.
+            </p>
+        </Tilt>
+    </main>
+</Layout>
