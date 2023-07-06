@@ -5,7 +5,7 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
-const url = Astro.site.origin;
+const url = Astro.site?.origin;
 const ogImage = new URL("/og-image.png", Astro.site);
 
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
