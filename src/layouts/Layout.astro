@@ -7,6 +7,8 @@ export interface Props {
 const { title, description } = Astro.props;
 const url = Astro.site.origin;
 const ogImage = new URL("/og-image.png", Astro.site);
+
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
 ---
 
 <!DOCTYPE html>
@@ -43,6 +45,8 @@ const ogImage = new URL("/og-image.png", Astro.site);
     <meta name="theme-color" content="#ffffff" />
 
     <meta name="generator" content={Astro.generator} />
+
+    <GoogleAnalytics id={import.meta.env.GA_ID} />
   </head>
   <body>
     <slot />
