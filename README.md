@@ -2,12 +2,12 @@
 
 Mack Talcott's personal website, built with:
 
-- [Astro](https://astro.build/)
-- [React](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Typed.js](https://github.com/mattboldt/typed.js)
-- [GSAP](https://github.com/greensock/GSAP)
-- [AWS Amplify](https://aws.amazon.com/amplify/)
+[![Astro](https://img.shields.io/badge/Astro-333333.svg?logo=astro)](https://astro.build/)
+[![React](https://img.shields.io/badge/React-333333.svg?logo=react)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-333333.svg?logo=tailwindcss)](https://tailwindcss.com/)
+[![Typed.js](https://img.shields.io/badge/Typed.js-333333.svg)](https://github.com/mattboldt/typed.js)
+[![GSAP](https://img.shields.io/badge/GSAP-333333.svg)](https://github.com/greensock/GSAP)
+[![AWS Amplify](https://img.shields.io/badge/AWS_Amplify-333333.svg?logo=awsamplify)](https://aws.amazon.com/amplify/)
 
 ## 🚀 Project Structure
 

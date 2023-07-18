@@ -35,8 +35,8 @@ export interface Props {
             var aY = event.accelerationIncludingGravity.y*1;
             var aZ = event.accelerationIncludingGravity.z*1;
 
-            var xPosition = Math.atan2(aY, aZ) * 40;
-            var yPosition = Math.atan2(aX, aZ) * 40;
+            var xPosition = Math.atan2(aY, aZ) * 20;
+            var yPosition = Math.atan2(aX, aZ) * 20;
             
             xPosition = Math.round(xPosition * 1000) / 1000;
             yPosition = Math.round(yPosition * 1000) / 1000;
